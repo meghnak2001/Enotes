@@ -5,12 +5,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NoteModel = void 0;
 const mariadb_1 = __importDefault(require("mariadb"));
-// MariaDB connection pool
 const pool = mariadb_1.default.createPool({
     host: 'localhost',
     user: 'root',
-    password: '6878', // Update with your actual password
-    database: 'enotes', // Update with your actual database name
+    password: '6878',
+    database: 'enotes',
     connectionLimit: 5,
 });
 class NoteModel {

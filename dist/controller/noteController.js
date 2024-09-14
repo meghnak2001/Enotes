@@ -29,7 +29,7 @@ class NoteController {
     }
     static async deleteNoteById(req, res) {
         const { id } = req.params;
-        const noteId = Number(id); // Convert id to number
+        const noteId = Number(id);
         if (isNaN(noteId)) {
             return res.redirect('/');
         }
@@ -44,7 +44,7 @@ class NoteController {
     }
     static async getEditNotePage(req, res) {
         const { id } = req.params;
-        const noteId = Number(id); // Convert id to number
+        const noteId = Number(id);
         if (isNaN(noteId)) {
             return res.redirect('/');
         }
@@ -66,7 +66,7 @@ class NoteController {
     static async updateNoteById(req, res) {
         const { id } = req.params;
         const { title, content } = req.body;
-        const noteId = Number(id); // Convert id to number
+        const noteId = Number(id);
         if (!title || !content || isNaN(noteId)) {
             return res.redirect(`/edit/${id}`);
         }
